@@ -1,0 +1,13 @@
+<p-carousel [value]="cars" styleClass="custom-carousel" [numVisible]="3" [numScroll]="1" [circular]="true"
+  [autoplayInterval]="3000" [responsiveOptions]="responsiveOptions" (onPage)="banner1PageChange($event)">
+  <ng-template let-car pTemplate="item">
+    <div class="car-details">
+      <div class="p-grid p-nogutter">
+        <div class="p-col-12 car-data">
+          <div class="car-title">{{car.brand}}</div>
+          <div class="car-subtitle">{{car.year}} | {{car.color}}</div>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+</p-carousel>
